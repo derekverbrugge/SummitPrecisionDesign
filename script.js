@@ -1,5 +1,5 @@
 /* ==========================================================
-   COMPONENT LOADER 
+   COMPONENT LOADER
 ========================================================== */
 
 async function loadComponent(elementId, file) {
