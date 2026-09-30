@@ -184,18 +184,11 @@ h3 {
 }
 
 .brand-mark {
-  width: 38px;
-  height: 38px;
-
-  display: grid;
-  place-items: center;
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  display: block;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .brand-name {
