@@ -1,49 +1,59 @@
 /* ==========================================================
-   LOAD HEADER AND FOOTER
+   COMPONENT LOADER
 ========================================================== */
 
 async function loadComponent(elementId, file) {
 
-  const element = document.getElementById(elementId);
+  const element =
+    document.getElementById(elementId);
 
   if (!element) return;
 
+
   try {
 
-    const response = await fetch(file);
+    const response =
+      await fetch(file);
 
     if (!response.ok) {
+
       throw new Error(
-        `Could not load ${file}: ${response.status}`
+        `Could not load ${file}`
       );
+
     }
 
-    element.innerHTML = await response.text();
+    element.innerHTML =
+      await response.text();
 
   } catch (error) {
 
     console.error(
-      `Component loading error:`,
+      "Component loading error:",
       error
     );
 
   }
+
 }
 
 
 /* ==========================================================
-   COPYRIGHT YEAR
+   COPYRIGHT
 ========================================================== */
 
 function setCopyrightYear() {
 
-  const yearElement =
-    document.getElementById("copyright-year");
+  const year =
+    document.getElementById(
+      "copyright-year"
+    );
 
-  if (!yearElement) return;
+  if (!year) return;
 
-  yearElement.textContent =
+  year.textContent =
     new Date().getFullYear();
+
 }
 
 
@@ -54,53 +64,67 @@ function setCopyrightYear() {
 function initializeNavigation() {
 
   const menuButton =
-    document.querySelector(".menu-toggle");
+    document.querySelector(
+      ".menu-toggle"
+    );
 
   const navigation =
-    document.querySelector(".primary-navigation");
-
-  if (!menuButton || !navigation) return;
-
-
-  menuButton.addEventListener("click", () => {
-
-    const isOpen =
-      navigation.classList.toggle("open");
-
-    menuButton.classList.toggle(
-      "active",
-      isOpen
+    document.querySelector(
+      ".primary-navigation"
     );
 
-    menuButton.setAttribute(
-      "aria-expanded",
-      String(isOpen)
-    );
 
-  });
+  if (!menuButton || !navigation) {
+    return;
+  }
 
 
-  /*
-   * Close the mobile menu after
-   * selecting a navigation link.
-   */
+  menuButton.addEventListener(
+    "click",
+    () => {
+
+      const isOpen =
+        navigation.classList.toggle(
+          "open"
+        );
+
+      menuButton.classList.toggle(
+        "active",
+        isOpen
+      );
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+    }
+  );
+
 
   navigation
     .querySelectorAll("a")
     .forEach(link => {
 
-      link.addEventListener("click", () => {
+      link.addEventListener(
+        "click",
+        () => {
 
-        navigation.classList.remove("open");
+          navigation.classList.remove(
+            "open"
+          );
 
-        menuButton.classList.remove("active");
+          menuButton.classList.remove(
+            "active"
+          );
 
-        menuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
 
-      });
+        }
+      );
 
     });
 
@@ -114,34 +138,44 @@ function initializeNavigation() {
 function initializeSmoothScrolling() {
 
   document
-    .querySelectorAll('a[href^="#"]')
+    .querySelectorAll(
+      'a[href^="#"]'
+    )
     .forEach(link => {
 
-      link.addEventListener("click", event => {
+      link.addEventListener(
+        "click",
+        event => {
 
-        const targetId =
-          link.getAttribute("href");
+          const targetId =
+            link.getAttribute("href");
 
-        if (
-          !targetId ||
-          targetId === "#"
-        ) {
-          return;
+          if (
+            !targetId ||
+            targetId === "#"
+          ) {
+            return;
+          }
+
+
+          const target =
+            document.querySelector(
+              targetId
+            );
+
+          if (!target) return;
+
+
+          event.preventDefault();
+
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
         }
-
-        const target =
-          document.querySelector(targetId);
-
-        if (!target) return;
-
-        event.preventDefault();
-
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
-      });
+      );
 
     });
 
@@ -149,70 +183,13 @@ function initializeSmoothScrolling() {
 
 
 /* ==========================================================
-   SCROLL REVEAL
-========================================================== */
-
-function initializeReveal() {
-
-  const elements =
-    document.querySelectorAll(
-      ".section-heading, " +
-      ".principle-card, " +
-      ".service-card, " +
-      ".journey-step, " +
-      ".callout, " +
-      ".method-copy, " +
-      ".two-column > div"
-    );
-
-  elements.forEach(element => {
-
-    element.classList.add("reveal");
-
-  });
-
-
-  const observer =
-    new IntersectionObserver(
-      entries => {
-
-        entries.forEach(entry => {
-
-          if (!entry.isIntersecting) {
-            return;
-          }
-
-          entry.target.classList.add("visible");
-
-          observer.unobserve(
-            entry.target
-          );
-
-        });
-
-      },
-      {
-        threshold: 0.12
-      }
-    );
-
-
-  elements.forEach(element => {
-
-    observer.observe(element);
-
-  });
-
-}
-
-
-/* ==========================================================
-   INITIALIZE SITE
+   INITIALIZE
 ========================================================== */
 
 async function initializeSite() {
 
   await Promise.all([
+
     loadComponent(
       "site-header",
       "header.html"
@@ -222,6 +199,7 @@ async function initializeSite() {
       "site-footer",
       "footer.html"
     )
+
   ]);
 
 
@@ -230,8 +208,6 @@ async function initializeSite() {
   initializeNavigation();
 
   initializeSmoothScrolling();
-
-  initializeReveal();
 
 }
 
