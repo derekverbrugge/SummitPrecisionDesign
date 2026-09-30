@@ -349,8 +349,11 @@ h3 {
 
     linear-gradient(
       0deg,
-      rgba(5, 9, 6, 0.72) 0%,
-      transparent 45%
+      #000000 0%,
+      rgba(0, 0, 0, 0.92) 8%,
+      rgba(5, 9, 6, 0.60) 28%,
+      rgba(5, 9, 6, 0.10) 55%,
+      transparent 75%
     );
 }
 
@@ -366,6 +369,7 @@ h3 {
 
   margin: 0 auto;
   padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .hero h1 {
