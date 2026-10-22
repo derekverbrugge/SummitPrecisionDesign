@@ -20,12 +20,22 @@
   <link rel="stylesheet" href="styles.css">
 
 <style>
-/* Responsive portrait: preserve full image and both shoulders. */
-.theme-portrait{display:block;position:relative;z-index:2;width:min(100%,360px);height:auto;flex:0 1 360px;margin:24px auto;overflow:visible}
-.theme-portrait picture,.theme-portrait img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;clip-path:none;mask-image:none;-webkit-mask-image:none}
-@media(min-width:800px){.theme-portrait{float:right;margin:0 0 20px 32px}}
-@media(max-width:799px){.theme-portrait{float:none;width:min(80vw,340px)}}
-.image-contact{position:relative;overflow:hidden;isolation:isolate;padding-bottom:clamp(210px,32vw,410px)}.image-contact>.theme-portrait{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:min(72vw,430px);max-width:none;height:auto;margin:0;z-index:2;float:none;pointer-events:none}.image-contact>.theme-portrait img{width:100%;height:auto;display:block;object-fit:contain;max-height:none}.image-contact .section-content{position:relative;z-index:3}@media(max-width:799px){.image-contact>.theme-portrait{width:min(78vw,390px)}}
+/* Contact portrait: no crop, anchored to bottom and clear of controls. */
+.image-contact{position:relative;isolation:isolate;overflow:hidden}
+.image-contact .section-content{position:relative;z-index:3}
+.image-contact>.theme-portrait{display:block;position:absolute;z-index:2;bottom:0;left:auto;right:3%;transform:none;width:min(34%,430px);height:auto;margin:0;float:none;pointer-events:none;overflow:visible}
+.image-contact>.theme-portrait img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:bottom;clip-path:none;mask-image:none;-webkit-mask-image:none}
+@media(min-width:800px){
+ .image-contact{padding-bottom:0;min-height:650px}
+ .image-contact .section-content{width:60%;max-width:660px;margin-left:5%;margin-right:auto;text-align:left}
+ .image-contact .contact-actions{justify-content:flex-start}
+}
+@media(max-width:799px){
+ .image-contact{display:flex;flex-direction:column;align-items:center;padding-bottom:0!important}
+ .image-contact .section-content{order:1;width:100%;margin-bottom:28px}
+ .image-contact>.theme-portrait{position:relative;order:2;bottom:auto;left:auto;right:auto;transform:none;width:min(78vw,390px);max-width:100%;margin:0 auto!important;align-self:center;line-height:0}
+ .image-contact>.theme-portrait img{display:block;width:100%;height:auto}
+}
 </style>
 </head>
 
