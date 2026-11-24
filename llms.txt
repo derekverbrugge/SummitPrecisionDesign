@@ -1,0 +1,5 @@
+# SummitPrecisionDesign
+
+- [Summit Precision Design](https://derekverbrugge.github.io/SummitPrecisionDesign/)
+
+[Full text](https://derekverbrugge.github.io/SummitPrecisionDesign/llms-full.txt)

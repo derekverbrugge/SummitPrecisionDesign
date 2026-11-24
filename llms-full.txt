@@ -1,0 +1,108 @@
+# SummitPrecisionDesign
+
+## Summit Precision Design
+Source: https://derekverbrugge.github.io/SummitPrecisionDesign/
+
+Clarity built
+for the climb.
+Purposeful landing pages and digital experiences
+that make what you do easier to understand—and easier to act on.
+Explore services
+How I think
+THE OBJECTIVE
+Good design makes the important
+things easier to understand.
+Businesses rarely suffer from a lack of information.
+More often, the important information is buried beneath
+complexity.
+PHILOSOPHY
+Understand honestly.
+Distill clearly.
+Recommend with integrity.
+Understand honestly.
+Start with reality. Understand the customer,
+the business, the environment, the objective,
+and the constraints before deciding what should
+be built.
+Distill clearly.
+Look beyond symptoms to find the essential problem.
+Remove unnecessary complexity and give the important
+information the attention it deserves.
+Recommend with integrity.
+Build what actually fits. Explain the reasoning,
+tradeoffs, and limitations honestly.
+WHAT I BUILD
+Digital experiences
+with a clear purpose.
+From a single landing page to a complete digital
+presence, every element begins with the objective.
+Landing Pages
+Landing pages designed to make a specific offer easier
+to understand, trust, and act on.
+Conversion-focused structure
+Clear messaging
+Responsive design
+Fast, lightweight implementation
+Digital Marketing
+Marketing experiences built around the questions customers
+need answered before they can make a decision.
+Campaign strategy
+Value proposition development
+Content hierarchy
+Customer-focused messaging
+Web Development
+Thoughtful implementation that uses technology where it
+meaningfully improves capability, performance,
+accessibility, or experience.
+HTML, CSS & JavaScript
+Responsive interfaces
+Static websites
+Performance-minded development
+THE METHOD
+Complexity belongs
+underneath.
+The customer shouldn't have to understand
+everything that went into the solution.
+Research, strategy, design, development,
+analytics, typography, interaction, and
+technical implementation can be sophisticated.
+The experience should not be.
+Good technology disappears into usefulness.
+Good design disappears into understanding.
+THE APPROACH
+A landing page should behave
+like a good salesperson.
+Connect
+Earn attention without shouting.
+Understand
+Show the visitor that you understand
+their situation.
+Clarify
+Reduce the problem to what actually matters.
+Demonstrate
+Show how the solution addresses the problem.
+Prove
+Support important claims with evidence.
+Invite
+Make the next decision simple.
+The goal isn't to manufacture desire.
+It is to understand existing needs and determine
+whether the solution can genuinely fulfill them.
+THE STANDARD
+Precise enough
+to be useful.
+Every decision should earn its place.
+A headline should communicate something important.
+A button should provide a meaningful next step.
+A photograph should establish context or feeling.
+A technical feature should solve a real problem.
+Nothing exists merely because it can.
+That is the discipline behind Summit Precision Design:
+thoughtful reduction without sacrificing capability.
+START WITH THE PROBLEM
+What are you trying
+to accomplish?
+Tell me what you're building, who it's for,
+and where you're getting stuck.
+Email me
+LinkedIn
