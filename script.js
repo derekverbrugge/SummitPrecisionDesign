@@ -13,7 +13,7 @@ async function loadComponent(elementId, file) {
   try {
 
     const response =
-      await fetch(file);
+      await fetch(file, { cache: "no-cache" });
 
     if (!response.ok) {
 
@@ -197,7 +197,7 @@ async function initializeSite() {
 
     loadComponent(
       "site-footer",
-      "footer.html"
+      "footer.html?v=20261124-2"
     )
 
   ]);
