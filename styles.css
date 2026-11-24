@@ -1332,3 +1332,5 @@ h3 {
       0.01ms !important;
   }
 }
+
+a,a:visited,a:hover,a:active,a:focus{text-decoration:none!important}.primary-navigation a::after{display:none}body{min-height:100vh;display:flex;flex-direction:column}main{flex:1}#site-footer{margin-top:auto}
